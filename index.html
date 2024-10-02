@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Funny Message</title>
+  <style>
+    body {
+      text-align: center;
+      background-color: #f2f2f2;
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    #container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    #initial-message, #second-message {
+      font-size: 2rem;
+      color: #333;
+    }
+
+    #second-message {
+      display: none;
+      font-size: 3rem;
+      color: red;
+      position: relative;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    #second-message span {
+      font-size: 3rem;
+      color: red;
+    }
+
+    .emoticon {
+      color: #ff6666;
+      font-size: 3rem;
+      margin-left: 10px;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 1.5rem;
+      background-color: #ff4d4d;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    button:hover {
+      background-color: #ff1a1a;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="container">
+    <div id="initial-message">Kamu tau ga apa bedanya kamu sama monyet?</div>
+
+    <div id="second-message">
+      <span>Ga ada</span><span class="emoticon">:p</span>
+    </div>
+  </div>
+
+  <script>
+    setTimeout(function() {
+      document.getElementById("initial-message").style.display = "none"; 
+      document.getElementById("second-message").style.display = "block"; 
+    }, 4000); 
+  </script>
+
+</body>
+</html>
